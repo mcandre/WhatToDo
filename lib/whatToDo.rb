@@ -28,4 +28,5 @@ require 'whatToDo/check_manager'
 checkManager = WhatToDo::CheckManager.new
 check_results = checkManager.run_checks(10)
 
+puts
 puts check_results.sample
