@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.executables   = ['whatToDo']
   s.extra_rdoc_files = ['README.md']
 
+  s.add_development_dependency 'colored'
+
   s.add_development_dependency 'bundler', '~> 1.3'
   s.add_development_dependency 'rake'
 end

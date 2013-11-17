@@ -6,6 +6,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    colored (1.2)
     rake (10.1.0)
 
 PLATFORMS
@@ -13,5 +14,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.3)
+  colored
   rake
   whatToDo!
