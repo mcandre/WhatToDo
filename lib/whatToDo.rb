@@ -24,5 +24,8 @@ end
 opt_parser.parse!
 
 
-# Require all check scripts
-Dir["lib/check/*.rb"].each { |file| require file }
+require 'whatToDo/check_manager'
+checkManager = WhatToDo::CheckManager.new
+check_results = checkManager.run_checks(10)
+
+puts check_results.sample

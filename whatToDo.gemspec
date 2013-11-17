@@ -17,9 +17,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version     = '>= 2.0.0'
 
   s.files         = `git ls-files`.split($/)
-  s.test_files    = s.files.grep(/^spec\//)
   s.require_paths = ['lib']
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.executables   = ['whatToDo']
   s.extra_rdoc_files = ['README.md']
 
   s.add_development_dependency 'bundler', '~> 1.3'
