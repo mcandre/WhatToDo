@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/phortx/WhatToDo'
   s.license       = 'MIT'
 
-  s.required_ruby_version     = '>= 2.0.0'
+  s.required_ruby_version     = '>= 1.9.3'
 
   s.files         = `git ls-files`.split($/)
   s.require_paths = ['lib']
