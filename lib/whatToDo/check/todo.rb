@@ -73,7 +73,7 @@ def snippet(file, from, to)
     end
   end
 
-  code.gsub(/^#{code.scan(/^\s+/).min}/, '')
+  code.gsub(/^#{code.scan(/^ +/).min}/, '')
 end
 
 
