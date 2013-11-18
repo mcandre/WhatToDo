@@ -1,3 +1,5 @@
+require 'pathname'
+
 module WhatToDo
   class CheckManager
     def initialize
