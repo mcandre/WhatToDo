@@ -10,7 +10,7 @@ check do
   end
 
   unless found
-    re = "There is no readme file in that project. Create one!"
+    re = "There is no readme file in that project. Create one!".bold.white
   end
 
   re

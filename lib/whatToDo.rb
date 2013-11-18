@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'optparse'
+require 'colored'
 
 
 # Command line options
@@ -33,5 +34,5 @@ puts
 if check_results.length > 0
   puts check_results.sample
 else
-  puts "Nothing to do here!"
+  puts "Nothing to do here!".green
 end
