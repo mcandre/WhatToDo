@@ -29,4 +29,9 @@ checkManager = WhatToDo::CheckManager.new
 check_results = checkManager.run_checks(10)
 
 puts
-puts check_results.sample
+
+if check_results.length > 0
+  puts check_results.sample
+else
+  puts "Nothing to do here!"
+end
