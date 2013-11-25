@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'optparse'
 require 'colored'
+require 'whatToDo/check_manager'
+require 'whatToDo/facet_analyzer'
 
 
 # Command line options
@@ -25,12 +27,23 @@ end
 opt_parser.parse!
 
 
-require 'whatToDo/check_manager'
-checkManager = WhatToDo::CheckManager.new
-check_results = checkManager.run_checks(10)
+# Init the facet analyser and run it so we know what project we have here.
+facet_analyzer = WhatToDo::CheckManager.new
+facets = facet_analyzer.facets
 
+
+# Init the check manager and run all checks
+check_manager = WhatToDo::CheckManager.new(facets)
+check_results = check_manager.run_checks(10)
+
+
+# Show the facets
+puts
+puts "Project facets: " + facets.map{ |f| f.to_s }.join(', ')
 puts
 
+
+# Print the result
 if check_results.length > 0
   puts check_results.sample
 else

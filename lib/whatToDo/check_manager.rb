@@ -2,8 +2,9 @@ require 'pathname'
 
 module WhatToDo
   class CheckManager
-    def initialize
+    def initialize(facets = [])
       @checks = []
+      @facets = facets
 
       # Require all check scripts
       dir = Pathname.new(File.dirname(__FILE__) + '/check').cleanpath
@@ -12,8 +13,10 @@ module WhatToDo
       end
     end
 
-    def check(&block)
-      @checks << block
+    def check(facets = [], &block)
+      if (x & y).any?
+        @checks << block
+      end
     end
 
     def run_checks(count)
