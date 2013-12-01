@@ -14,7 +14,7 @@ module WhatToDo
     end
 
     def check(facets = [], &block)
-      if (x & y).any?
+      if !facets.any? || (facets & @facets).any?
         @checks << block
       end
     end

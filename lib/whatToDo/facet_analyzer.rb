@@ -13,7 +13,12 @@ module WhatToDo
     end
 
     def facet(facets)
-      @facets += facet if yield
+      unless facets.is_a?(Array)
+        facets = [facets]
+      end
+
+      @facets += facets if yield
+      @facets.flatten
     end
   end
 end

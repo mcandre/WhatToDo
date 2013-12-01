@@ -28,7 +28,7 @@ opt_parser.parse!
 
 
 # Init the facet analyser and run it so we know what project we have here.
-facet_analyzer = WhatToDo::CheckManager.new
+facet_analyzer = WhatToDo::FacetAnalyzer.new
 facets = facet_analyzer.facets
 
 

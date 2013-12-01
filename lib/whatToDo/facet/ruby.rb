@@ -1,3 +1,3 @@
 facet(:ruby) do
-  false
+  File.file?('Gemfile')
 end
