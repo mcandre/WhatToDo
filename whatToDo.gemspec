@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors       = ['Benjamin Kammerl']
   s.email         = ['benny@itws.de']
   s.description   = 'Helps you to get back in a project after some idle time or to contribute to a OpenSource project by telling you what you can do on the project.'
-  s.summary       = ''
+  s.summary       = s.description
   s.homepage      = 'https://github.com/phortx/WhatToDo'
   s.license       = 'MIT'
 
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.executables   = ['whatToDo']
   s.extra_rdoc_files = ['README.md']
 
-  s.add_development_dependency 'colored'
+  s.add_runtime_dependency 'colored'
 
   s.add_development_dependency 'bundler', '~> 1.3'
   s.add_development_dependency 'rake'
