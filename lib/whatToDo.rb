@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'optparse'
 require 'colored'
+require 'whatToDo/util'
 require 'whatToDo/check_manager'
 require 'whatToDo/facet_analyzer'
 
@@ -39,13 +40,27 @@ check_results = check_manager.run_checks(10)
 
 # Show the facets
 puts
-puts "Project facets: " + facets.map{ |f| f.to_s }.join(', ')
+puts 'Project facets: '.bold.white
+puts '  ' + facets.map{ |f| f.to_s }.join(', ')
 puts
+
+
+# If it's a git project, display the last commit messages and the last changed files
+if facets.include?(:git)
+  puts 'Last commits:'.bold.white
+  puts indent(`git log -5 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative`, 2)
+  puts
+
+  puts 'Last changed files:'.bold.white
+  puts indent(`git diff $(git log -5 --format=%H | tail -n1).. --stat`, 1)
+  puts
+end
 
 
 # Print the result
 if check_results.length > 0
-  puts check_results.sample
+  puts 'Suggested todo:'.bold.white
+  puts '  ' + check_results.sample
 else
-  puts "Nothing to do here!".green
+  puts 'Nothing to do here!'.green
 end
