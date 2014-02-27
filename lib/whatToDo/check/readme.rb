@@ -2,7 +2,7 @@ check do
   re = nil
   found = false
 
-  ['README', 'README.md', 'README.txt', 'README.html'].each do |fileName|
+  ['README.rdoc', 'README', 'README.md', 'README.txt', 'README.html'].each do |fileName|
     if File.file?(fileName)
       found = true
       break
