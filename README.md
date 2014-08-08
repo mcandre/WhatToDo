@@ -4,7 +4,7 @@ As a developer you probably know that situation: You've been hacking in a projec
 
 The same issue occurs if you're joining a new project or want to start to contribute to an OpenSource project. You have no idea where to start.
 
-WhatToDo is a tool which aims to help you over that obstacle, by analysing your project and telling you what you can do. It gives you concrete todos to help you to get startet with the project and get back into it.
+WhatToDo is a tool which aims to help you over that obstacle, by analysing your project and telling you what you can do. It gives you concrete todos to help you to get started with the project and get back into it.
 
 Works for ruby projects only currently.
 
