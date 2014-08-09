@@ -1,6 +1,6 @@
 # WhatToDo
 
-As a developer you probably know that situation: You've been hacking in a project for some weeks and suddenly you're stuck or don't have any time to complete or have to stop developing for some other reason. The project stays untouched in the git repository and is idling. Dome weeks or months or even years later you want to get back in the project and finish it or fix a bug or somethine like that. But you don't know were the fuck you have quit the work in the project and have no idea what to do next.
+As a developer you probably know that situation: You've been hacking in a project for some weeks and suddenly you're stuck or don't have any time to complete or have to stop developing for some other reason. The project stays untouched in the git repository and is idling. Some weeks or months or even years later you want to get back in the project in order to finish it or fix a bug or something like that. But you don't know were the fuck you have quit the work you and have no idea what to do next.
 
 The same issue occurs if you're joining a new project or want to start to contribute to an OpenSource project. You have no idea where to start.
 
@@ -11,7 +11,7 @@ Works for ruby projects only currently.
 ![screenshot](https://raw.github.com/phortx/WhatToDo/master/screenshot.png)
 
 
-(And this gem is under heavy development currently. Contributions are welcome.)
+(This gem is under heavy development currently. Contributions are welcome.)
 
 
 # Dependencies
