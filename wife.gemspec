@@ -1,24 +1,24 @@
 # coding: utf-8
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift(lib) unless $:.include?(lib)
-require 'whatToDo/version'
+require 'wife/version'
 
 Gem::Specification.new do |s|
-  s.name          = 'whatToDo'
-  s.version       = WhatToDo::VERSION.to_s
+  s.name          = 'wife'
+  s.version       = Wife::VERSION.to_s
   s.platform      = Gem::Platform::RUBY
   s.authors       = ['Benjamin Kammerl']
   s.email         = ['benny@itws.de']
-  s.description   = 'Helps you to get back in a project after some idle time or to contribute to a OpenSource project by telling you what you can do on the project.'
+  s.description   = 'Beefs. No matter how hard you try, this gem will always find something to do in your project. It tells you what you can do on a project, whats missing, errors, stuff.'
   s.summary       = s.description
-  s.homepage      = 'https://github.com/phortx/WhatToDo'
+  s.homepage      = 'https://github.com/phortx/wife'
   s.license       = 'MIT'
 
   s.required_ruby_version     = '>= 1.9.3'
 
   s.files         = `git ls-files`.split($/)
   s.require_paths = ['lib']
-  s.executables   = ['whatToDo']
+  s.executables   = ['wife']
   s.extra_rdoc_files = ['README.md']
 
   s.add_runtime_dependency 'colored'
