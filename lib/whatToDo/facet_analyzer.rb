@@ -1,4 +1,4 @@
-module WhatToDo
+module Wife
   class FacetAnalyzer
     attr_reader :facets
 
