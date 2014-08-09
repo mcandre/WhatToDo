@@ -1,6 +1,6 @@
 require 'pathname'
 
-module WhatToDo
+module Wife
   class CheckManager
     def initialize(facets = [])
       @checks = []
