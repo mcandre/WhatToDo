@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'optparse'
 require 'colored'
-require 'whatToDo/util'
-require 'whatToDo/check_manager'
-require 'whatToDo/facet_analyzer'
+require 'wife/util'
+require 'wife/check_manager'
+require 'wife/facet_analyzer'
 
 
 # Command line options
@@ -12,7 +12,7 @@ options = {
 }
 
 opt_parser = OptionParser.new do |opt|
-  opt.banner = 'Usage: whatToDo [OPTIONS]'
+  opt.banner = 'Usage: wife [OPTIONS]'
   opt.separator ''
   opt.separator 'Options'
 
@@ -29,12 +29,12 @@ opt_parser.parse!
 
 
 # Init the facet analyser and run it so we know what project we have here.
-facet_analyzer = WhatToDo::FacetAnalyzer.new
+facet_analyzer = Wife::FacetAnalyzer.new
 facets = facet_analyzer.facets
 
 
 # Init the check manager and run all checks
-check_manager = WhatToDo::CheckManager.new(facets)
+check_manager = Wife::CheckManager.new(facets)
 check_results = check_manager.run_checks(10)
 
 
