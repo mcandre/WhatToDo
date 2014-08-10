@@ -63,4 +63,5 @@ if check_results.length > 0
   puts '  ' + check_results.sample
 else
   puts 'Nothing to do here!'.green
+	puts
 end
