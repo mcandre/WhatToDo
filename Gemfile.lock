@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    whatToDo (0.0.1)
+    wife (0.0.1)
       colored
 
 GEM
@@ -16,4 +16,4 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.3)
   rake
-  whatToDo!
+  wife!
