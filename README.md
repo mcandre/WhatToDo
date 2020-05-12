@@ -15,7 +15,7 @@ Works for ruby projects only currently.
 
 
 # Dependencies
-You just need at least ruby 1.9.3 installed.
+You just need at least ruby 2.7+ installed.
 
 
 # Installation

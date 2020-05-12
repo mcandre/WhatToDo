@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/phortx/wife'
   s.license       = 'MIT'
 
-  s.required_ruby_version     = '>= 1.9.3'
+  s.required_ruby_version     = '>= 2.7'
 
   s.files         = `git ls-files`.split($/)
   s.require_paths = ['lib']
@@ -23,6 +23,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'colored'
 
-  s.add_development_dependency 'bundler', '~> 1.3'
-  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rake', '~> 12.3.3'
 end
